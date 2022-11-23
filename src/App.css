@@ -1,0 +1,13 @@
+.profiles {
+  display: grid;
+  /* display: grid; */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.profile {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
