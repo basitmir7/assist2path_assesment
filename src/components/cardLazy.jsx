@@ -3,7 +3,6 @@ import "react-loading-skeleton/dist/skeleton.css";
 const CardLazy = () => {
   return (
     <div className="card-loading-skeleton profiles-sk">
-      {/* <Skeleton className="profile-sk" /> */}
       {[...Array(10)].map((x, i) => (
         <Skeleton className="profile-sk" key={i} />
       ))}

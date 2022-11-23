@@ -1,7 +1,6 @@
 import "./App.css";
 import React from "react";
 import CardLazy from "./components/cardLazy";
-// import Profiles from "./components/profiles";
 import { useState, useEffect } from "react";
 
 const Profiles = React.lazy(() => import("./components/profiles"));
@@ -22,6 +21,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1 style={{ textAlign: "center" }}>PROFILES</h1>
       <React.Suspense fallback={<CardLazy />}>
         <Profiles data={profiles} />
       </React.Suspense>

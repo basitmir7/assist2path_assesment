@@ -1,7 +1,5 @@
-// import Profile from "./profile";
 import React from "react";
 
-// import { useRef } from "react";
 const Profile = React.lazy(() => import("./profile"));
 
 const Profiles = ({ data }) => {
