@@ -10,7 +10,18 @@
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+.profile > img {
+  margin-bottom: 2.5rem;
+}
+.profile > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+  margin: 0.4rem 0;
+}
+.profile > div > * {
+  color: rgb(29, 29, 29);
+}
 .profiles-sk {
   box-sizing: border-box;
   display: grid;
