@@ -11,10 +11,26 @@
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.loading {
+/* .loading {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30px;
+} */
+.profiles-sk {
+  box-sizing: border-box;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.profile-sk {
+  height: calc(100vh- width);
+  min-height: 500px;
+  /* padding: 10px;
+  margin: 10px; */
+
+  /* width: 30%; */
 }

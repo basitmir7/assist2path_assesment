@@ -1,5 +1,7 @@
 // import Profile from "./profile";
 import React from "react";
+
+// import { useRef } from "react";
 const Profile = React.lazy(() => import("./profile"));
 
 const Profiles = ({ data }) => {
@@ -15,6 +17,7 @@ const Profiles = ({ data }) => {
     "https://avatars.dicebear.com/api/gridy/:seed.svg",
     "https://avatars.dicebear.com/api/micah/:seed.svg",
   ];
+
   return (
     <div className="profiles">
       {data.map((info, index) => {

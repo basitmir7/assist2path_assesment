@@ -1,5 +1,6 @@
 import "./App.css";
 import React from "react";
+import CardLazy from "./components/cardLazy";
 // import Profiles from "./components/profiles";
 import { useState, useEffect } from "react";
 
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <React.Suspense fallback={<div className="loading">Loading...</div>}>
+      <React.Suspense fallback={<CardLazy />}>
         <Profiles data={profiles} />
       </React.Suspense>
     </div>
