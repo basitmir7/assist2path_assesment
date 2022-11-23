@@ -1,22 +1,29 @@
 import "./App.css";
-import Profiles from "./components/profiles";
+import React from "react";
+// import Profiles from "./components/profiles";
 import { useState, useEffect } from "react";
+
+const Profiles = React.lazy(() => import("./components/profiles"));
 
 function App() {
   const [profiles, setProfiles] = useState([]);
   const url = "https://jsonplaceholder.typicode.com/users";
   useEffect(() => {
-    const fetchData = () => {
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => setProfiles(data));
-    };
-    fetchData();
+    setTimeout(() => {
+      const fetchData = () => {
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => setProfiles(data));
+      };
+      fetchData();
+    }, 800);
   }, []);
+
   return (
     <div className="App">
-      <Profiles data={profiles} />
-      {console.log(profiles)}
+      <React.Suspense fallback={<div className="loading">Loading...</div>}>
+        <Profiles data={profiles} />
+      </React.Suspense>
     </div>
   );
 }
